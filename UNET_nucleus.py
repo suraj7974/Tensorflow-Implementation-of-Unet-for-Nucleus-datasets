@@ -26,7 +26,7 @@ test_ids = next(os.walk(TEST_PATH))[1]
 X_train = np.zeros((len(train_ids), IMG_HEIGHT, IMG_WIDTH, IMG_CHANNELS), dtype=np.uint8)
 Y_train = np.zeros((len(train_ids), IMG_HEIGHT, IMG_WIDTH, 1), dtype=np.bool_)
 
-
+#resize images
 print('Resizing training images and masks')
 for n, id_ in tqdm(enumerate(train_ids), total=len(train_ids)):   
     path = TRAIN_PATH + id_
