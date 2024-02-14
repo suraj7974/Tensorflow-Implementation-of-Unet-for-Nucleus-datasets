@@ -2,9 +2,7 @@ import tensorflow as tf
 import os 
 import random
 import numpy as np
- 
 from tqdm import tqdm 
-
 from skimage.io import imread, imshow
 from skimage.transform import resize
 import matplotlib.pyplot as plt
@@ -135,10 +133,7 @@ callbacks = [
 
 result = model.fit(X_train, Y_train, validation_split=0.1, batch_size=16, epochs=25, callbacks=callbacks)
 
-
-
-####################################
-
+##### load random photos 
 idx = random.randint(0, len(X_train))
 
 
